@@ -39,7 +39,7 @@
     }
     .card {
       width: 100%;
-      max-width: 480px;
+      max-width: 560px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
@@ -83,6 +83,43 @@
     a.app .emoji { font-size: 26px; }
     a.app .name { font-weight: 600; }
     a.app .desc { color: var(--muted); font-size: 13px; }
+    .demo {
+      margin-top: 28px;
+      text-align: left;
+    }
+    .demo h2 {
+      margin: 0 0 4px;
+      font-size: 16px;
+    }
+    .demo p.hint {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 460px) {
+      .videos { grid-template-columns: 1fr; }
+    }
+    .video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #000;
+    }
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
     footer {
       margin-top: 28px;
       font-size: 13px;
@@ -107,6 +144,29 @@
         </span>
       </a>
     </div>
+
+    <section class="demo">
+      <h2>設定示範</h2>
+      <p class="hint">跟著影片一步步設定，讓倒數住進動態島。</p>
+      <div class="videos">
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/jO79i1jF8PU"
+            title="搶菇助手 設定示範 1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/aFyRNmQUuKw"
+            title="搶菇助手 設定示範 2"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <a href="https://deantw69.github.io/mushroom_privacy/">隱私權政策</a>
